@@ -1,0 +1,142 @@
+@charset "utf-8";
+body{
+  margin: 0;
+}
+header{
+  background-color: rgb(57, 89, 107);
+}
+.container{
+  width: 1190px;
+  margin: 0 auto;
+}
+.header-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-left{
+  color: #ffffff;
+  .header-logo{
+    display: flex;
+  }
+}
+
+nav{
+  color: #ffffff;
+  
+  ul{
+
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+
+    li{
+      padding: 0 20px;
+      a{
+        text-decoration: none;
+        color: rgb(139, 255, 230);
+      }
+    }
+  }
+}
+@mixin btn1 {
+  background-color: rgb(97, 111, 241);
+  color: rgb(0, 255, 234);
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 30px;
+  &:hover{
+    background-color: rgb(122, 134, 238);
+  }
+  &:active{
+    background-color: rgb(69, 174, 216);
+  }
+}
+.top-wrapper{
+  height: 1100px;
+  background-image: url("../image/1-160F6223046.jpg");
+  background-position: center;
+  background-size: cover;
+  .top-contents{
+    width: 50%;
+    img,h2,p{
+      padding-bottom: 80px;
+    }
+    img{
+      padding-top: 50px;
+    }
+    a{
+      @include btn1;
+
+    }
+  }
+}
+.aboutMiku-wrapper{
+  background-color: rgb(231, 255, 246);
+  text-align: center;
+  h2,p,a{
+    padding: 20px 0;
+    margin-top: 0px;
+  }
+  a{
+    @include btn1;
+    display: inline-block;
+    margin: 30px;
+  }
+}
+.v-contents{
+  display: flex;
+
+  &:nth-child(odd){
+    flex-direction: row-reverse;
+    text-align: right;
+  }
+}
+
+.fav-song{
+  background-color: rgb(231, 255, 246);
+  padding: 20px;
+  input{
+    height: 25px;
+  }
+  textarea{
+    height: 50px;
+  }
+  input,textarea{
+    display: block;
+    width: 90%;
+    margin: 20px auto;
+  }
+  .submit{
+    border-radius: 10px;
+    width: 10%;
+    box-shadow: 1px 1px;
+    outline:none;
+    &:active{
+      box-shadow: none;
+      position: relative;
+      top: 1px;
+      left: 1px;
+      transition: all 1s;
+    }
+  }
+}
+footer{
+  background-color: rgb(57, 89, 107);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  
+  .container{
+    
+    nav{
+      display: inline-block;
+      ul{
+        margin: 0;
+  
+      }
+    }
+  }
+}
